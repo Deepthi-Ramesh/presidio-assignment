@@ -7,14 +7,14 @@ function Footer({media}){
     return(
         <div className="maincontainer">
            <div className="con1">
-            {media ? <div>
+            {!media ? <div>
            <span id='under'>Sign up</span>or <span id='under'>Sign in</span>  to your account to view more work personalized to your preferences.</div>:<div>Get unlimited search results and advanced search filters ,only on the Behance App</div>}
             
            </div>
            <div className="con2">
-            <button >{media? "Sign Up with Email":"Open in App"}</button>
+            <button >{!media? "Sign Up with Email":"Open in App"}</button>
            
-            {media ? <><p>or</p><div className="icons-div">
+            {!media ? <><p>or</p><div className="icons-div">
             <p id='icon' ><AppleIcon size='1.2rem'/></p>
             <FacebookRoundedIcon sx={{
                 fontSize: "2.8rem",

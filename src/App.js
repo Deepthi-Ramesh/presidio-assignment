@@ -13,20 +13,21 @@ function App() {
   const [matches, setMatches] = useState(false);
 
     useEffect(() => {
-      const mql = window.matchMedia("(min-width: 992px)");
+      const mql = window.matchMedia("(max-width:600px)");
       mql.addEventListener("change", resize);
       function resize(e) {
           if (e.matches) { // If media query matches
              setMatches(true)
           } else {
              setMatches(false)
-             
+
           }
       }
       return () => {
           mql.removeEventListener("change", resize);
       }
   },[]);
+  console.log(matches);
   const sortCategories =Array.from(new Set(images.map((item) => item.category)));
   const [selectedCategory, setSelectedCategory] = useState("recommended");
   const [filteredImages,setFilteredImages] = useState(images);

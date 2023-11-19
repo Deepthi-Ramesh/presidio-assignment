@@ -79,15 +79,15 @@ function Header({sortCategories, selectedCategory, setSelectedCategory,media}){
             <div className='nav_items2'>
                  <FontAwesomeIcon icon={faBell} size='1.5rem' cursor={'pointer'}/>
                  <div className='cred'>
-                {media ?  <button id='login'>Log In</button> : null}
+                {!media ?  <button id='login'>Log In</button> : null}
                 
-                 <button id='signup'>{media? "Sign Up":"Use App"}</button>
+                 <button id='signup'>{!media? "Sign Up":"Use App"}</button>
                  </div>
                 
-                {media?<p>|</p>:null } 
+                {!media?<p>|</p>:null } 
                  
                  <div id='freetrail' onMouseEnter={() => setLocked(true)} onMouseLeave={() => setLocked(false)}><img src={createcloud} alt=''/>Free Trail</div>
-                 {media ? <img src={image} alt='' id='adobe' onMouseEnter={() => setLockedadobe(true)} onMouseLeave={() => setLockedadobe(false)}/> : <FontAwesomeIcon icon={faSearch}/>}
+                 {!media ? <img src={image} alt='' id='adobe' onMouseEnter={() => setLockedadobe(true)} onMouseLeave={() => setLockedadobe(false)}/> : <FontAwesomeIcon icon={faSearch}/>}
                  
             </div>
          </div>
