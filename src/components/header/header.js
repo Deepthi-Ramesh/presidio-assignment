@@ -24,7 +24,7 @@ import {faPaperclip} from '@fortawesome/free-solid-svg-icons/faPaperclip';
 import {faShapes}from '@fortawesome/free-solid-svg-icons/faShapes';
 import {faCaretDown} from '@fortawesome/free-solid-svg-icons/faCaretDown'
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
-function Header({sortCategories, selectedCategory, setSelectedCategory,media}){
+function Header({sortCategories, selectedCategory, setSelectedCategory}){
     const subNavigationItems = ["Projects", "Assets", "Images", "Prototypes", "Streams", "People", "Moodbrands"]
     const freetraiItems = ["Creative cloud","Photoshop","illustrator","Indesign","Express","premeire"];
     const [selectedSubNavigation, setselectedSubNavigation] = useState("Projects");
@@ -63,7 +63,7 @@ function Header({sortCategories, selectedCategory, setSelectedCategory,media}){
         setSelectedCategory(category);
         setShowSort(false);
     }
-    console.log(media);
+
     return (
         <>
         <div className='main_container'>
@@ -79,15 +79,15 @@ function Header({sortCategories, selectedCategory, setSelectedCategory,media}){
             <div className='nav_items2'>
                  <FontAwesomeIcon icon={faBell} size='1.5rem' cursor={'pointer'}/>
                  <div className='cred'>
-                {!media ?  <button id='login'>Log In</button> : null}
+              <button id='login'>Log In</button> 
                 
-                 <button id='signup'>{!media? "Sign Up":"Use App"}</button>
+                 <button id='signup'> Sign Up</button>
                  </div>
                 
-                {!media?<p>|</p>:null } 
+                  <p>|</p>
                  
                  <div id='freetrail' onMouseEnter={() => setLocked(true)} onMouseLeave={() => setLocked(false)}><img src={createcloud} alt=''/>Free Trail</div>
-                 {!media ? <img src={image} alt='' id='adobe' onMouseEnter={() => setLockedadobe(true)} onMouseLeave={() => setLockedadobe(false)}/> : <FontAwesomeIcon icon={faSearch}/>}
+              <img src={image} alt='' id='adobe' onMouseEnter={() => setLockedadobe(true)} onMouseLeave={() => setLockedadobe(false)}/>
                  
             </div>
          </div>
@@ -151,7 +151,7 @@ function Header({sortCategories, selectedCategory, setSelectedCategory,media}){
                 <div id={selectedSubNavigation !== item ? 'clickbg' : 'black'} onClick={(e) => handleSubNavigation(item)} >{item}</div>
             ))}
          </div>
-         {media?<div className='tools-bar'>
+       <div className='tools-bar'>
             <div className='subscriptions'>
                  <FontAwesomeIcon icon={faShapes} /><p>creative Fields</p>
             </div>
@@ -178,7 +178,7 @@ function Header({sortCategories, selectedCategory, setSelectedCategory,media}){
                 <p>Sort</p>
                 <p>{selectedCategory}<FontAwesomeIcon icon={faCaretDown}/></p>
             </div>
-          </div> : null}
+          </div>
          
          
         </div>

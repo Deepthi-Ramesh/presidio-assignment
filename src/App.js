@@ -10,24 +10,7 @@ import Sticky from './components/sticky-footer/sticky';
 
 
 function App() {
-  const [matches, setMatches] = useState(false);
-
-    useEffect(() => {
-      const mql = window.matchMedia("(max-width:600px)");
-      mql.addEventListener("change", resize);
-      function resize(e) {
-          if (e.matches) { // If media query matches
-             setMatches(true)
-          } else {
-             setMatches(false)
-
-          }
-      }
-      return () => {
-          mql.removeEventListener("change", resize);
-      }
-  },[]);
-  console.log(matches);
+ 
   const sortCategories =Array.from(new Set(images.map((item) => item.category)));
   const [selectedCategory, setSelectedCategory] = useState("recommended");
   const [filteredImages,setFilteredImages] = useState(images);
@@ -39,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-       <Header sortCategories={sortCategories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} media={matches}/>
+       <Header sortCategories={sortCategories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
        <div className='container'>
        {filteredImages.map((item)=>{
         return(
@@ -50,7 +33,7 @@ function App() {
        })}
        </div>
       
-        <Footer media={matches}/>
+        <Footer/>
        <Sticky/>
     
     </div>
