@@ -1,0 +1,134 @@
+.product{
+    position: relative;
+    width: 26rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 0.5rem;
+}
+.imgpart{
+    width: 100%;
+    height: 48vh;
+    /* position: relative; */
+}
+.imgpart img{
+    width: 100%;
+    height: 100%;
+}
+.product-description{
+    display: flex;
+    flex-direction:column;
+   
+    margin-top: 0.4rem ;
+}
+.product-des1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    width: 27%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    color: #191919;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.productname{
+    width: 60%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1rem;
+}
+.like,.view{
+    cursor: pointer;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0;
+    cursor: pointer;
+}
+.view{
+    width: 42%;
+}
+.descripition{
+    font-size: 0.9rem;
+    color: #191919;
+}
+.locked-product {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26rem;
+    height: 48vh;
+    background:rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
+}
+.locked-product .saveicon{
+  width: 23%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #494545;
+   color: white;
+   border-radius: 1.5rem;
+   font-size: 0.89rem;
+}
+#blue-icon img{
+   margin-top: 0.5rem;
+   width: 2rem;
+   height: 4rem;
+   transition: 0.5ms ease-in-out;
+}
+#blue-icon img:hover{
+    margin-top: 1.2rem;
+    height: 5rem;
+}
+.product-hover{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.viewModal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    border: 1px solid black;
+    background-color: rgba(74, 69, 69,0.8);
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cross{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+@media (min-width:0px) and (max-width:600px) {
+    .product{
+        width: 21rem;
+        padding: 0 0.1rem;
+    }
+}

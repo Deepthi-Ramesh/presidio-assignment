@@ -1,0 +1,15 @@
+.dropdown-container {
+    height: auto;
+    width: 13%;
+    padding: 1rem;
+    background-color: white;
+    position: absolute;
+    top: 16rem;
+    right: 0;
+    z-index: 1;
+}
+
+.drop-down-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
