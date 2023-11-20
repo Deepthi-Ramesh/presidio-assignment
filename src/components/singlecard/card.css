@@ -10,7 +10,6 @@
 .imgpart{
     width: 100%;
     height: 48vh;
-    /* position: relative; */
 }
 .imgpart img{
     width: 100%;
@@ -122,10 +121,18 @@
     height: 5rem;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem 0;
-    margin-top: 3rem;
-    background-color: gray;
+    padding: 1rem 0.5rem;
+    margin-top: 5rem;   
+}
+.cross-btn{
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
 
+.cross-btn:hover {
+    border: 1px solid rgb(183, 183, 183);
+    background-color: rgba(217, 217, 217,0.6);
 }
 @media (min-width:0px) and (max-width:600px) {
     .product{

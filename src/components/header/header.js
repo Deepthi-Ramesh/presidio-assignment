@@ -76,12 +76,12 @@ function Header({sortCategories, selectedCategory, setSelectedCategory}){
                ))
 }
             </div>
-            <div className='nav_items2'>
+            <div className='nav_items2' style={{width: "40%"}}>
                  <FontAwesomeIcon icon={faBell} size='1.5rem' cursor={'pointer'}/>
                  <div className='cred'>
-              <button id='login'>Log In</button> 
+                    <button id='login'>Log In</button> 
                 
-                 <button id='signup'> Sign Up</button>
+                    <button id='signup'> Sign Up</button>
                  </div>
                 
                   <p>|</p>
@@ -101,9 +101,9 @@ function Header({sortCategories, selectedCategory, setSelectedCategory}){
                             {search ? "PROJECTS" : "Suggested Searhes"}
                         </div>
                         <div className='project-list'>
-                            {filteredProjects?.length > 0 && filteredProjects.map((project) => (
+                            {filteredProjects?.length > 0 ? filteredProjects.map((project) => (
                                 <div className='project'>{project}</div>
-                            )) }
+                            )) : <div className='project'>No search result found</div>}
                         </div>
                         {search && <div className='search-for'>
                             Search for {search} in

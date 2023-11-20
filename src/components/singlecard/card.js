@@ -21,11 +21,6 @@ function Card(props){
         setLiked(!liked);
         
     }
-
-    useEffect(() => {
-        console.log("clicked : ", clicked);
-    }, [clicked]);
-  
  
     return(
         <>
@@ -56,10 +51,13 @@ function Card(props){
         {
             clicked && 
             <div className="viewModal">
-              <div className="cross">  <FontAwesomeIcon icon={faXmark} color="#fff" size="xl" onClick={()=>{
-         
-                    setClicked(false)
-                }}/></div>
+              <div className="cross"> 
+                <div className="cross-btn">
+                <FontAwesomeIcon icon={faXmark} color="#fff" size="xl" onClick={()=>{
+                        setClicked(false)
+                    }}/>
+                </div>
+                </div>
              
                 <div id='modalimg'><img src={img} alt=""/></div>
             </div>
