@@ -204,11 +204,11 @@
 .search-auto-complete {
     z-index: 2;
     width: 42.4%;
-    height: 80vh;
+    height: 73vh;
     background: white;
     display: flex;
     position: absolute;
-    top: 22%;
+    top: 9rem;
     left: 2.3%;
     flex-direction:column;
     padding-left: 4%;
@@ -249,7 +249,6 @@
    grid-template-rows: auto auto;
    grid-row-gap: 1rem;
    grid-column-gap:1rem;
-
    margin-right: 1rem;
 }
 
@@ -362,7 +361,7 @@
     border: 1px solid rgb(227, 227, 227);
     padding: 0 1rem 0 1rem;
     border-radius: 0.5rem;
-    transition: 1ms ease-in-out;
+
 }
 .tools-bar p{
    margin-left:  1rem;
@@ -395,23 +394,14 @@
     .main_container{
         border: none;
     }
-    .search-bar{
-       
-        margin-left: 1.1rem;
-    }
-    #search-bar{
-        width: 50%;
-        justify-content: space-between;
-    }
+
     #clickbg{
         display: none;
     }
     #black{
         width: 50%;
     }
-    .search-auto-complete{
-        width: 100%;
-    }
+
 }
 
 
